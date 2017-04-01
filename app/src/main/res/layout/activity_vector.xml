@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rayhahah.advancedanim.VectorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VectorDrawable使用"
+            android:textSize="20sp"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="doClick"
+            app:srcCompat="@drawable/arrow_anim"/>
+
+        <TextView
+            android:visibility="visible"
+            android:id="@+id/tv_path"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:drawableTop="@drawable/anim_square_play"
+            android:onClick="doClick"
+            android:scaleType="fitXY"
+            android:text="轨迹绘制"
+            />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="doClick"
+            app:srcCompat="@drawable/anim_arrow_bank_play"/>
+
+        <TextView
+            android:id="@+id/tv_set"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:drawableTop="@drawable/anim_three_point_loading"
+            android:onClick="doClick"
+            android:scaleType="fitXY"
+            android:text="三点动画组合"
+            />
+
+        <TextView
+            android:id="@+id/tv_helix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:drawableTop="@drawable/anim_helix_play"
+            android:gravity="center"
+            android:onClick="doClick"
+            android:scaleType="fitXY"
+            android:text="超级螺旋"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:drawableTop="@drawable/anim_beauty_circle_play"
+            android:gravity="center"
+            android:onClick="doClick"
+            android:scaleType="fitXY"
+            android:text="超级芒星"
+            android:visibility="gone"
+            />
+
+
+    </LinearLayout>
+</ScrollView>

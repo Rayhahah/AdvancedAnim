@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+                 xmlns:tools="http://schemas.android.com/tools"
+                 android:drawable="@drawable/ic_svg_three_point"
+                 tools:targetApi="lollipop">
+
+    <target
+        android:name="point_i"
+        android:animation="@animator/anim_translate_top"
+        />
+    <target
+        android:name="point_ii"
+        android:animation="@animator/anim_translate_top_i"
+        />
+    <target
+        android:name="point_iii"
+        android:animation="@animator/anim_translate_top_ii"
+        />
+
+
+</animated-vector>

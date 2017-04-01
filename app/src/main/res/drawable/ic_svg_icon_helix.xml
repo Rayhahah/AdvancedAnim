@@ -1,0 +1,12 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="100dp"
+        android:height="100dp"
+        android:viewportHeight="128.0"
+        android:viewportWidth="132.0">
+    <path
+        android:name="helix"
+        android:pathData="M69,77C85.22,77 87.45,53 69,53C43.95,53 46.05,91 69,91C107.05,91 107.99,35 70,35C20.56,35 21.07,109 70,109C131.66,109 131,17 70,17C-1.39,17 -2.34,126 70,126C148.41,126 151.5,2 70,2C44.87,2 2,17 2,68"
+        android:strokeColor="@android:color/holo_blue_dark"
+        android:strokeLineCap="round"
+        android:strokeWidth="5"/>
+</vector>

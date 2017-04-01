@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator
+    xmlns:androd="http://schemas.android.com/apk/res/android"
+    androd:duration="2000"
+    androd:propertyName="translateX"
+    androd:valueFrom="0"
+    androd:valueTo="1024"
+    androd:startOffset="500"
+    androd:valueType="floatType">
+
+</objectAnimator>

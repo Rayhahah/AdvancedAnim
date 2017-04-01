@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_svg_arrow_right_bank"
+    >
+
+    <target
+        android:name="hollow"
+        android:animation="@animator/anim_translate_top_iii"/>
+    <target
+        android:name="arrow"
+        android:animation="@animator/anim_translate_right_i"/>
+    <target
+        android:name="arrow_path"
+        android:animation="@animator/anim_color_turn_red_fill"/>
+
+</animated-vector>
