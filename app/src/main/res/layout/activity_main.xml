@@ -18,6 +18,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:gravity="center"
             android:text="动画进阶学习"
             android:textSize="30sp"/>
@@ -29,7 +30,30 @@
             android:layout_margin="20dp"
             android:onClick="doClick"
             android:text="VectorDrawable"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/btn_bezier"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:onClick="doClick"
+            android:text="Bezier"
+            android:textAllCaps="false"
+            android:textColor="#ff5831"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/btn_pathmeasure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:onClick="doClick"
+            android:text="PathMeasure"
+            android:textAllCaps="false"
+            android:textColor="#ff5831"
+            android:textSize="25sp"/>
 
 
     </LinearLayout>

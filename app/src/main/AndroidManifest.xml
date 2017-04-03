@@ -20,6 +20,10 @@
         </activity>
         <activity android:name=".VectorActivity">
         </activity>
+        <activity android:name=".BezierActivity">
+        </activity>
+        <activity android:name=".PathMeasureActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.rayhahah.advancedanim.PathMeasureActivity">
+
+    <com.rayhahah.advancedanim.PathMeasureView
+        android:id="@+id/pathMeasureView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/tb_normal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textOff="开始绘制"
+            android:textOn="停止绘制"
+            />
+
+        <ToggleButton
+            android:id="@+id/tb_window"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textOff="开启Window"
+            android:textOn="停止Window"/>
+
+        <ToggleButton
+            android:id="@+id/tb_arrow"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textOff="开启箭头"
+            android:textOn="停止箭头"/>
+
+    </LinearLayout>
+
+</LinearLayout>
