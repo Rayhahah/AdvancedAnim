@@ -1,9 +1,11 @@
-package com.rayhahah.advancedanim;
+package com.rayhahah.advancedanim.pathmeasure;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.CompoundButton;
 import android.widget.ToggleButton;
+
+import com.rayhahah.advancedanim.R;
 
 public class PathMeasureActivity extends AppCompatActivity implements CompoundButton.OnCheckedChangeListener {
 

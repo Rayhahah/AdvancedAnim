@@ -31,6 +31,7 @@
             android:onClick="doClick"
             android:text="VectorDrawable"
             android:textAllCaps="false"
+            android:textColor="#f14ac5"
             android:textSize="25sp"/>
 
         <Button
@@ -41,7 +42,7 @@
             android:onClick="doClick"
             android:text="Bezier"
             android:textAllCaps="false"
-            android:textColor="#ff5831"
+            android:textColor="#3cd634"
             android:textSize="25sp"/>
 
         <Button
@@ -53,6 +54,17 @@
             android:text="PathMeasure"
             android:textAllCaps="false"
             android:textColor="#ff5831"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/btn_lollipop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:onClick="doClick"
+            android:text="lollipop"
+            android:textAllCaps="false"
+            android:textColor="#5d5fff"
             android:textSize="25sp"/>
 
 

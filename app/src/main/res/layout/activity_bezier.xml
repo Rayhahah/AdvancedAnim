@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.rayhahah.advancedanim.BezierActivity">
+
+    tools:context="com.rayhahah.advancedanim.bezier.BezierActivity">
 
     <com.rayhahah.advancedanim.bezier.SecondBezierView
         android:id="@+id/secondBV"
@@ -32,6 +33,13 @@
 
     <com.rayhahah.advancedanim.bezier.WaveView
         android:id="@+id/waveView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone"/>
+
+    <com.rayhahah.advancedanim.bezier.BallRollView
+        android:id="@+id/ballRollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"

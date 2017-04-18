@@ -1,9 +1,11 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+    //Gradle指定使用jcenter代码仓库
     repositories {
         jcenter()
     }
+    //声明依赖Android Gradle 插件版本
     dependencies {
         classpath 'com.android.tools.build:gradle:2.3.0'
 
@@ -11,13 +13,14 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
-
+//这里可以为项目整体配置属性
 allprojects {
     repositories {
         jcenter()
     }
 }
 
+//任务：每次构建的时候删除指定目录
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

@@ -6,9 +6,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.rayhahah.advancedanim.PathMeasureActivity">
+    tools:context="com.rayhahah.advancedanim.pathmeasure.PathMeasureActivity">
 
-    <com.rayhahah.advancedanim.PathMeasureView
+    <com.rayhahah.advancedanim.pathmeasure.PathMeasureView
         android:id="@+id/pathMeasureView"
         android:layout_width="match_parent"
         android:layout_height="0dp"

@@ -1,4 +1,4 @@
-package com.rayhahah.advancedanim;
+package com.rayhahah.advancedanim.bezier;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -6,10 +6,7 @@ import android.view.View;
 
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
-import com.rayhahah.advancedanim.bezier.DrawPathView;
-import com.rayhahah.advancedanim.bezier.SecondBezierView;
-import com.rayhahah.advancedanim.bezier.ThirdBezierView;
-import com.rayhahah.advancedanim.bezier.WaveView;
+import com.rayhahah.advancedanim.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +19,7 @@ public class BezierActivity extends AppCompatActivity implements BottomNavigatio
     private List<View> mViewList = new ArrayList<>();
     private DrawPathView drawPath;
     private WaveView waveView;
+    private BallRollView ballRollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +42,7 @@ public class BezierActivity extends AppCompatActivity implements BottomNavigatio
                 .addItem(new BottomNavigationItem(R.mipmap.ic_white_flash_128, "三阶"))
                 .addItem(new BottomNavigationItem(R.mipmap.ic_white_flash_128, "写字板"))
                 .addItem(new BottomNavigationItem(R.mipmap.ic_white_flash_128, "波浪"))
+                .addItem(new BottomNavigationItem(R.mipmap.ic_white_flash_128, "滚动小球"))
                 .initialise();
         bnb.setTabSelectedListener(this);
 
@@ -60,6 +59,8 @@ public class BezierActivity extends AppCompatActivity implements BottomNavigatio
         mViewList.add(drawPath);
         waveView = (WaveView) findViewById(R.id.waveView);
         mViewList.add(waveView);
+        ballRollView = (BallRollView) findViewById(R.id.ballRollView);
+        mViewList.add(ballRollView);
     }
 
     @Override
@@ -76,6 +77,9 @@ public class BezierActivity extends AppCompatActivity implements BottomNavigatio
                 break;
             case 3:
                 setViewVisible(waveView);
+                break;
+            case 4:
+                setViewVisible(ballRollView);
                 break;
         }
 

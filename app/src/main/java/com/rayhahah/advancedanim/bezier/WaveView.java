@@ -3,10 +3,13 @@ package com.rayhahah.advancedanim.bezier;
 import android.animation.Animator;
 import android.animation.ValueAnimator;
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.PorterDuff;
+import android.graphics.PorterDuffXfermode;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
@@ -46,6 +49,9 @@ public class WaveView extends View implements View.OnClickListener {
     private boolean mIsCircle = true;
     private Path mPathCircle;
     private int mRadius;
+    private Paint mShapePaint;
+    private Bitmap mBackGround;
+    private Canvas mC;
 
 
     public WaveView(Context context) {
@@ -79,15 +85,18 @@ public class WaveView extends View implements View.OnClickListener {
         initPathAndPaint();
 
         setOnClickListener(this);
+        mBackGround = Bitmap.createBitmap(mViewWidth, mViewHeight,
+                Bitmap.Config.ARGB_8888);
+
+        mC = new Canvas();
+        mC.setBitmap(mBackGround);
 
     }
 
 
     @Override
     protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
-        mPathCircle.reset();
-        mPathCircle.addCircle(mViewWidth / 2, mViewHeight / 2, mRadius, Path.Direction.CCW);
+//        super.onDraw(canvas);
 
         drawWave(canvas, mPathTwo, mPaintTwo, (int) (mOffset + 120), -20,
                 mWaveLength, mCenterHeight, mIsCircle);
@@ -96,6 +105,9 @@ public class WaveView extends View implements View.OnClickListener {
         drawWave(canvas, mPathThree, mPaintThree, (int) (mOffset - 80), -10,
                 mWaveLength, mCenterHeight + 30, mIsCircle);
 
+//        mPathCircle.reset();
+//        mPathCircle.addCircle(mViewWidth / 2, mViewHeight / 2, mRadius, Path.Direction.CCW);
+//        canvas.drawCircle(mBackGround, 0, 0, null);
 
     }
 
@@ -141,11 +153,15 @@ public class WaveView extends View implements View.OnClickListener {
         path.close();
 
         if (isCircle) {
-            mPathCircle.op(path, Path.Op.INTERSECT);
-            canvas.drawPath(mPathCircle, paint);
+            Bitmap circleBitmap = getCircleBitmap();
+            paint.setXfermode(null);
+            canvas.drawPath(path, paint);
+            paint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_IN));
+            canvas.drawBitmap(circleBitmap, 0, 0, paint);
+//            mPathCircle.op(path, Path.Op.INTERSECT);
+//            canvas.drawPath(mPathCircle, paint);
         } else {
             canvas.drawPath(path, paint);
-
         }
     }
 
@@ -259,6 +275,21 @@ public class WaveView extends View implements View.OnClickListener {
         mPaintThree.setStrokeWidth(2);
         mPaintThree.setStyle(Paint.Style.FILL);
 
+    }
+
+    /**
+     * 绘制形状
+     *
+     * @return
+     */
+    public Bitmap getCircleBitmap() {
+
+        Canvas canvas = new Canvas(mBackGround);
+        Paint paint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        paint.setColor(Color.argb(255, 255, 255, 255));
+        canvas.drawCircle(mViewWidth / 2, mViewHeight / 2, mRadius,
+                paint);
+        return mBackGround;
     }
 
 

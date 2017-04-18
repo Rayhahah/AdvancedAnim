@@ -1,4 +1,4 @@
-package com.rayhahah.advancedanim;
+package com.rayhahah.advancedanim.pathmeasure;
 
 import android.animation.ValueAnimator;
 import android.content.Context;

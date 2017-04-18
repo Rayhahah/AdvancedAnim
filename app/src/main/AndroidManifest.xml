@@ -18,11 +18,15 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".VectorActivity">
+        <activity android:name=".vector.VectorActivity">
         </activity>
-        <activity android:name=".BezierActivity">
+        <activity android:name=".bezier.BezierActivity">
         </activity>
-        <activity android:name=".PathMeasureActivity">
+        <activity android:name=".pathmeasure.PathMeasureActivity">
+        </activity>
+        <activity android:name=".lollipop.LollipopActivity">
+        </activity>
+        <activity android:name=".lollipop.TestAnimActivity">
         </activity>
     </application>
 

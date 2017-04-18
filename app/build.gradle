@@ -1,8 +1,15 @@
+//apply plugin : 表示Gradle所引入的插件
+//这里表示该module是一个Android Application，插件里面有Android相关的一切工具
 apply plugin: 'com.android.application'
 
+//android ： 描述了当前Android module构建过程所用到的所有参数
 android {
+    //目标版本号
     compileSdkVersion 25
+    //编译工具版本号
+
     buildToolsVersion "25.0.2"
+    //默认配置
     defaultConfig {
         applicationId "com.rayhahah.advancedanim"
         minSdkVersion 19
@@ -12,6 +19,7 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }
+    //构建配置
     buildTypes {
         release {
             minifyEnabled false
@@ -19,7 +27,7 @@ android {
         }
     }
 }
-
+//dependencies ： 当前Android Module构建过程中所依赖的所有库
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {

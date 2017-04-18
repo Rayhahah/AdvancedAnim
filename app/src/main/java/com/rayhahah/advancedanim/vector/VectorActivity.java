@@ -1,4 +1,4 @@
-package com.rayhahah.advancedanim;
+package com.rayhahah.advancedanim.vector;
 
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.AnimatedVectorDrawable;
@@ -9,6 +9,8 @@ import android.support.v7.app.AppCompatDelegate;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.rayhahah.advancedanim.R;
 
 public class VectorActivity extends AppCompatActivity {
 
