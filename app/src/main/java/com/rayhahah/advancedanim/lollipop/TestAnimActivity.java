@@ -3,6 +3,10 @@ package com.rayhahah.advancedanim.lollipop;
 import android.animation.Animator;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.ChangeBounds;
+import android.transition.ChangeClipBounds;
+import android.transition.ChangeImageTransform;
+import android.transition.ChangeTransform;
 import android.transition.Explode;
 import android.transition.Fade;
 import android.transition.Slide;
@@ -31,8 +35,9 @@ public class TestAnimActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
-        setContentView(R.layout.activity_test_anim);
+        getWindow().setSharedElementsUseOverlay(true);
         setTransition(getIntent().getIntExtra(TAG_ANIM, 0));
+        setContentView(R.layout.activity_test_anim);
         initView();
 
         llRoot.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
@@ -44,7 +49,7 @@ public class TestAnimActivity extends AppCompatActivity {
                         llRoot.getWidth() / 2,
                         llRoot.getHeight() / 2,
                         50,
-                       1000);
+                        1000);
                 circularReveal.setInterpolator(new AccelerateDecelerateInterpolator());
                 circularReveal.setDuration(1000);
                 circularReveal.start();
@@ -58,7 +63,7 @@ public class TestAnimActivity extends AppCompatActivity {
                         0,
                         0,
                         0,
-                        ivImageI.getWidth()+159);
+                        ivImageI.getWidth() + 159);
                 circularReveal.setInterpolator(new AccelerateDecelerateInterpolator());
                 circularReveal.setDuration(1000);
                 circularReveal.start();
@@ -79,14 +84,68 @@ public class TestAnimActivity extends AppCompatActivity {
             case 1:
                 getWindow().setEnterTransition(new Explode());
                 getWindow().setExitTransition(new Explode());
+                getWindow().setReenterTransition(new Explode());
+                getWindow().setReturnTransition(new Explode());
                 break;
             case 2:
                 getWindow().setEnterTransition(new Slide());
                 getWindow().setExitTransition(new Slide());
+                getWindow().setReenterTransition(new Slide());
+                getWindow().setReturnTransition(new Slide());
                 break;
             case 3:
                 getWindow().setEnterTransition(new Fade());
                 getWindow().setExitTransition(new Fade());
+                getWindow().setReenterTransition(new Fade());
+                getWindow().setReturnTransition(new Fade());
+
+                break;
+
+            case 4:
+                getWindow().setEnterTransition(new Fade());
+                getWindow().setExitTransition(new Fade());
+                getWindow().setReenterTransition(new Fade());
+                getWindow().setReturnTransition(new Fade());
+
+                getWindow().setSharedElementExitTransition(new ChangeBounds());
+                getWindow().setSharedElementEnterTransition(new ChangeBounds());
+                getWindow().setSharedElementReenterTransition(new ChangeBounds());
+                getWindow().setSharedElementReturnTransition(new ChangeBounds());
+
+                break;
+            case 5:
+                getWindow().setEnterTransition(new Fade());
+                getWindow().setExitTransition(new Fade());
+                getWindow().setReenterTransition(new Fade());
+                getWindow().setReturnTransition(new Fade());
+
+                getWindow().setSharedElementExitTransition(new ChangeClipBounds());
+                getWindow().setSharedElementEnterTransition(new ChangeClipBounds());
+                getWindow().setSharedElementReenterTransition(new ChangeClipBounds());
+                getWindow().setSharedElementReturnTransition(new ChangeClipBounds());
+
+                break;
+            case 6:
+                getWindow().setEnterTransition(new Fade());
+                getWindow().setExitTransition(new Fade());
+                getWindow().setReenterTransition(new Fade());
+                getWindow().setReturnTransition(new Fade());
+
+                getWindow().setSharedElementExitTransition(new ChangeTransform());
+                getWindow().setSharedElementEnterTransition(new ChangeTransform());
+                getWindow().setSharedElementReenterTransition(new ChangeTransform());
+                getWindow().setSharedElementReturnTransition(new ChangeTransform());
+                break;
+            case 7:
+                getWindow().setEnterTransition(new Fade());
+                getWindow().setExitTransition(new Fade());
+                getWindow().setReenterTransition(new Fade());
+                getWindow().setReturnTransition(new Fade());
+
+                getWindow().setSharedElementExitTransition(new ChangeImageTransform());
+                getWindow().setSharedElementEnterTransition(new ChangeImageTransform());
+                getWindow().setSharedElementReenterTransition(new ChangeImageTransform());
+                getWindow().setSharedElementReturnTransition(new ChangeImageTransform());
                 break;
         }
     }

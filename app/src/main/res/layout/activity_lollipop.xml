@@ -46,6 +46,42 @@
             android:text="淡出跳转"
             android:textSize="25sp"/>
 
+
+        <Button
+            android:id="@+id/btn_changebounds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btnClick"
+            android:text="changebounds"
+            android:textSize="25sp"/>
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_changeclipbounds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btnClick"
+            android:text="changeclipbounds"
+            android:textSize="25sp"/>
+
+        <Button
+            android:visibility="gone"
+            android:id="@+id/btn_changetransform"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btnClick"
+            android:text="changetransform"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/btn_changeimagetransform"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btnClick"
+            android:text="changeimagetransform"
+            android:textSize="25sp"/>
+
+
         <ImageView
             android:id="@+id/iv_image_i"
             android:layout_width="100dp"

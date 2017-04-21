@@ -43,6 +43,19 @@ public class LollipopActivity extends AppCompatActivity {
             case R.id.btn_fade:
                 animType = TestAnimActivity.ANIM_FADE;
                 break;
+            case R.id.btn_changebounds:
+                animType = 4;
+                break;
+            case R.id.btn_changeclipbounds:
+                animType = 5;
+                break;
+            case R.id.btn_changetransform:
+                animType = 6;
+                break;
+            case R.id.btn_changeimagetransform:
+                animType = 7;
+                break;
+
         }
         mIntent.putExtra(TestAnimActivity.TAG_ANIM, animType);
 
