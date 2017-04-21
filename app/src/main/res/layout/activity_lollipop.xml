@@ -1,19 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.rayhahah.advancedanim.lollipop.LollipopActivity">
 
-    <Button
-
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="25sp"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
 
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btn_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btnClick"
+            android:text="普通跳转"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/btn_explode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btnClick"
+            android:text="分解跳转"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/btn_slide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btnClick"
+            android:text="滑动跳转"
+            android:textSize="25sp"/>
+
+        <Button
+            android:id="@+id/btn_fade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="btnClick"
+            android:text="淡出跳转"
+            android:textSize="25sp"/>
+
+        <ImageView
+            android:id="@+id/iv_image_i"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher"
+            android:tint="#b24e44"
+            android:tintMode="add"
+            android:transitionName="one"/>
+
+        <ImageView
+            android:id="@+id/iv_image_ii"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher"
+            android:tint="#44980f"
+            android:tintMode="add"
+            android:transitionName="two"/>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:shadowColor="#ff475d"
+            android:textColorHighlight="#bfd9ff"/>
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/ripple_red"
+            android:color="#ff9f5f"
+            />
+
+
+    </LinearLayout>
+</ScrollView>
+

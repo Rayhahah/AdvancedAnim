@@ -1,10 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
+    android:id="@+id/ll_root"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#4974ff"
+    android:gravity="center"
+    android:orientation="vertical"
     tools:context="com.rayhahah.advancedanim.lollipop.TestAnimActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hahahahahaha"
+        android:textSize="50sp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp"/>
+
+    <ImageView
+        android:id="@+id/iv_image_i"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@mipmap/ic_launcher"
+        android:tint="#b24e44"
+        android:tintMode="add"
+        android:transitionName="one"/>
+
+    <ImageView
+        android:id="@+id/iv_image_ii"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@mipmap/ic_launcher"
+        android:tint="#3055b2"
+        android:tintMode="add"
+        android:transitionName="two"/>
+
+
+</LinearLayout>
